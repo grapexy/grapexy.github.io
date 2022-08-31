@@ -12,6 +12,6 @@ jobs:
         with:
           python-version: 3.x
       - uses: snok/install-poetry@v1
-      - run: poetry export -f requirements.txt --output requirements.txt
+      - run: poetry export -f requirements.txt --without-hashes --output requirements.txt
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
